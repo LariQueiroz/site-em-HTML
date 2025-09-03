@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+header{
+    border: 1px solid black;
+    background-color: darkgrey;
+}
+.link{
+    display: flex;
+    padding: 2;
+}
+h1{
+    border: 2px solid black;
+    text-align: center;
+    background-color: darkgrey;
+}
+h2{
+    margin: 2;
+}
+h3{
+    margin: 2;
+}
+table{
+    width: 100%;
+}
