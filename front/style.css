@@ -1,0 +1,22 @@
+#calcForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#calcForm input,
+#calcForm select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button{
+    width: 20%;
+    background-color:cornflowerblue;
+}
+button:hover{
+    background-color:rgb(132, 170, 240);
+}
