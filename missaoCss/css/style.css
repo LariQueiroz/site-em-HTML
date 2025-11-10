@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  padding: 80px;
+  max-width: 1200px;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0, 120, 255, 0.15);
+  background-color: #fad8d8;
+}
+
+.slide.ativo {
+  display: block;
+  animation: aparecer 0.7s ease-in-out;
+}
+
+h1 {
+  font-size: 2.3em;
+  color: #25080e;
+  margin-bottom: 10px;
+}
+
+.azul {
+  color: #b91a22;
+}
+
+p, li {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+li::before {
+  content: "• ";
+  color: #ff748b;
+  font-weight: bold;
+}
+
+a {
+  color: #b91a22;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background: #fad5dd;
+  color: #ee0505;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.controles {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  background: #af172c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #750b25;
+}
+
+.thanks {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #a30d19;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
