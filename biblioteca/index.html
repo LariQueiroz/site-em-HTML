@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header>
+    <h1>Paraíso dos Leitores</h1>
+    <nav>
+        <ul class="link">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="romance.html">Romance</a></li>
+            <li><a href="ação.html">Ação</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <center><div class="pesquisar">
+     <label for="nome"><h3>Nome do livro que deseja pesquisar para ler:</h3></label><br>
+    <input type="text" id="nomeLivro" name="nomeLivro" placeholder="Insira aqui...">
+    <button type="button" onclick="pesquisarLivro()">Pesquisar</button></center>
+    </div>
+    <h2>Livros mais emprestados:</h2>
+    <table class="populares">
+        <tr>
+            <th>"A Hipótese do Amor" Gênero: Romance</th>
+            <th>"Como Eu Era Antes de Você" Gênero: Romance</th>
+            <th>"As crônicas de Narnia" Gênero: Ação</th>
+            <th>"Senhor dos Anéis" Gênero: Ação</th>
+        </tr>
+        <tr>
+            <td><img src="a hipótese.jpg" alt="Imagem do livro"></td>
+            <td><img src="como eu era.jpg" alt="Imagem do livro"></td>
+            <td><img src="cronicas.webp" alt=""></td>
+            <td><img src="senhor.jpg" alt=""></td>
+        </tr>
+    </table>
+</body>
+ <footer><section id="contato">
+    <p>Contato</p>
+   <p>Endereço: Av Pedro Rocha, 234, São Paulo BR <br>
+   Telefone: 11 99856-4521 <br>
+   &copy 2025; Paraíso dos Leitores - Todos os Direitos Reservados</p>
+    </footer></section>
+    <script src="js/script.js"></script>
+</html>
