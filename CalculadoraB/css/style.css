@@ -1,0 +1,32 @@
+*{
+    text-align: center;
+}
+body{
+    background-color: aliceblue;
+}
+
+h1, h2{
+    color: rgb(5, 141, 141);
+}
+.calculadora{
+    background-color: rgb(220, 239, 245);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#resultado {
+    background-color: rgb(255, 255, 255);
+    height: 20px;
+    width: 110px;
+}
+
+.botao{
+    background-color: rgb(191, 221, 247);
+}
+
+button:hover{
+    background-color: rgb(223, 237, 250);
+}
