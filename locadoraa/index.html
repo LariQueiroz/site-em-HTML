@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema da Locadora</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>LOCADORA</h1>
+    <nav>
+        <a href="#" onclick="mostrar('login')">Login</a>
+        <a href="#" onclick="mostrar('carros')">Carros</a>
+        <a href="#" onclick="mostrar('clientes')">Clientes</a>
+        <a href="#" onclick="mostrar('agendamentos')">Agendamentos</a>
+    </nav>
+</header>
+
+
+<section id="login" class="card">
+    <h2>Login</h2>
+    <label>Email:</label>
+    <input type="email" placeholder="exemplo@email.com">
+
+    <label>Senha:</label>
+    <input type="password" placeholder="********">
+
+    <button onclick="mostrar('carros')">Entrar</button>
+</section>
+
+
+<section id="carros" class="card hidden">
+    <h2>Cadastro de Carros</h2>
+
+    <label>Placa</label>
+    <input type="text">
+
+    <label>Marca</label>
+    <input type="text">
+
+    <label>Modelo</label>
+    <input type="text">
+
+    <label>Ano</label>
+    <input type="number">
+
+    <label>Cor</label>
+    <input type="text">
+
+    <button onclick="mostrar('clientes')">Salvar</button>
+</section>
+
+<section id="clientes" class="card hidden">
+    <h2>Cadastro de Clientes</h2>
+
+    <label>Nome</label>
+    <input type="text">
+
+    <label>CPF</label>
+    <input type="text">
+
+    <label>Telefone</label>
+    <input type="text">
+
+    <label>Email</label>
+    <input type="email">
+
+    <button onclick="mostrar('agendamentos')">Salvar</button>
+</section>
+
+
+<section id="agendamentos" class="card hidden">
+    <h2>Agendamentos</h2>
+
+    <label>Cliente</label>
+    <input type="text">
+
+    <label>Carro</label>
+    <input type="text">
+
+    <label>Retirada</label>
+    <input type="datetime-local">
+
+    <label>Devolução</label>
+    <input type="datetime-local">
+
+    <button onclick="mostrar('login')">Salvar</button>
+</section>
+
+<footer>
+    © Locadora — Todos os direitos reservados
+</footer>
+<script>
+function mostrar(tela) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+    document.getElementById(tela).classList.remove("hidden");
+}
+</script>
+</body>
+</html>

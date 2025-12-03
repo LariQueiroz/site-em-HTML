@@ -1,0 +1,87 @@
+:root {
+    --azul: #005ca9;
+    --azul-claro: #4db0ff;
+    --cinza-claro: #f3f5f7;
+    --texto: #333;
+}
+body {
+    margin: 0;
+    font-family: Arial;
+    background: var(--cinza-claro);
+    color: var(--texto);
+}
+
+header {
+    background: var(--azul);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+section {
+    padding: 20px 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+button {
+    background: var(--azul-claro);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 80px;
+    margin-top: 40px;
+}
+
+.hidden {
+    display: none;
+}
