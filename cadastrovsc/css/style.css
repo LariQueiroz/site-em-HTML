@@ -1,0 +1,13 @@
+#cadastro{
+text-align: center;
+height: 500px;
+width: 200px;
+background-color: ghostwhite;
+}
+button{
+    background-color: rgb(214, 127, 252);
+    color: white;
+}
+.fundo{
+    background-color: rgb(213, 130, 248);
+}
