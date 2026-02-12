@@ -1,0 +1,24 @@
+#top{
+    width: 600px;
+}
+#topo{
+    height: 200px;
+}
+button:hover{
+    background-color: rgb(246, 237, 255);
+}
+
+.editar{
+    color: white;
+    background-color: rgb(252, 183, 55);
+}
+.excluir{
+    color: white;
+    background-color: rgb(250, 69, 69);
+}
+th{
+    background-color: rgb(189, 122, 252);
+}
+#novo{
+    background-color: rgb(189, 122, 252);
+}
