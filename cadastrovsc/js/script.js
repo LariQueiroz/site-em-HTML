@@ -1,36 +1,38 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("formCadastro");
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); 
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+    const errorMsg = document.getElementById("errorMsg");
 
-    const usuario = {
-      nome: document.getElementById("nome").value.trim(),
-      email: document.getElementById("email").value.trim(),
-      senha: document.getElementById("senha").value.trim(),
-      perfil: document.getElementById("perfil").value,
-      endereco: document.getElementById("endereco").value.trim(),
-      bairro: document.getElementById("bairro").value.trim(),
-      complemento: document.getElementById("complemento").value.trim(),
-      cep: document.getElementById("cep").value.trim(),
-      cidade: document.getElementById("cidade").value.trim(),
-      estado: document.getElementById("estado").value.trim()
-    };
+    errorMsg.textContent = "";
 
-    if (!usuario.nome || !usuario.email || !usuario.senha) {
-      alert("Preencha Nome, Email e Senha!");
-      return;
-    }
+    fetch("http://localhost:8080/usuarios/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            email: email,
+            senha: senha
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Email ou senha inválidos");
+        }
+        return response.json();
+    })
+    .then(usuario => {
+        // salva usuário no navegador
+        localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
 
-    if (usuario.senha.length < 6) {
-      alert("A senha deve ter no mínimo 6 caracteres.");
-      return;
-    }
+        alert("Bem-vindo " + usuario.nome);
 
-    console.log("Usuário cadastrado:", usuario);
-
-    alert("Usuário cadastrado com sucesso!");
-
-    form.reset();
-  });
+        // redireciona
+        window.location.href = "usuarios.html";
+    })
+    .catch(error => {
+        errorMsg.textContent = error.message;
+    });
 });

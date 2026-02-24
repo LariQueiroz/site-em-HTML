@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body><div class="fundo">
-    <center><form id="cadastro">
-        <h1>Cadastro Usuário</h1>
-        <label for="Nome">Nome</label>
-  <input type="text" id="nome" name="nome"/>
-        <label for="Email">Email</label>
-  <input type="email" id="email"/>
-<label for="Senha">Senha</label>
-  <input type="password" id="senha" name="senha"/>
-  <select id="perfil">
-    <option value="USER">USER</option>
-    <option value="ADMIN">ADMIN</option>
-  </select>
-<label for="Endereço">Endereço</label>
-  <input type="text" id="endereco" />
-<label for="Bairro">Bairro</label>
-  <input type="text" id="bairro" />
-<label for="Complemento">Complemento</label>
-  <input type="text" id="complemento" name="complemento"/>
-<label for="Cep">Cep</label>
-  <input type="text" id="cep" />
-<label for="Cidade">Cidade</label>
-  <input type="text" id="cidade" />
-<label for="Estado">Estado</label>
-  <input type="text" id="estado" name="estado"/>
+<body>
 
-  <button type="submit">Salvar Usuário</button>
-</form></center></div>
+<div class="login-container">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="senha" placeholder="Senha" required>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <div class="error" id="errorMsg"></div>
+    </form>
+</div>
 <a href="js/script.js"></a>
 </body>
 </html>
